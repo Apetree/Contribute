@@ -1,5 +1,30 @@
-{
+"revision below this":{
     "recommendations": [
-        "docsmsft.docs-authoring-pack"
-    ]
-}
+        "docsmsft.docs-authoring-pack" ],
+           "look further down"}
+"this one#"{  "name": "windows-default",
+  "displayName": "Windows x64 Debug",
+  "description": "Sets Ninja generator, compilers, x64 architecture, build and install directory, debug build type",
+  "generator": "Ninja",
+  "binaryDir": "${sourceDir}/out/build/${presetName}",
+  "architecture": {"value": "x64",
+    "strategy": "external"},
+    "cacheVariables": { "CMAKE_BUILD_TYPE": "Debug",
+    "CMAKE_INSTALL_PREFIX": 
+        "${sourceDir}/out/install/${presetName}"  }, "vendor": {
+        "microsoft.com/VisualStudioSettings/CMake/1.0": {
+            "hostOS": [ "Windows" ],
+         "here is for linux"   },{ "name": "linux-default",
+  "displayName": "Linux Debug",
+  "description": "Sets Ninja generator, compilers, build and install directory, debug build type",
+  "generator": "Ninja",
+  "binaryDir": "${sourceDir}/out/build/${presetName}",
+  "cacheVariables":{
+            "CMAKE_BUILD_TYPE":
+            "Debug","CMAKE_INSTALL_PREFIX": "${sourceDir}/out/install/${presetName}" },
+        "vendor": {  
+            "microsoft.com/VisualStudioSettings/CMake/1.0": {
+      "hostOS": [ "Linux" ]},  
+            "microsoft.com/VisualStudioRemoteSettings/CMake/1.0":{
+                "sourceDir": "$env{HOME}/.vs/$ms{projectDirName}"       
+            }} }, "ref: [Microsoft learn Cmake preset](https://learn.microsoft.com/en-us/cpp/build/cmake-presets-vs?view=msvc-170#supported-cmake-and--cmakepresetsjson-versions )"
